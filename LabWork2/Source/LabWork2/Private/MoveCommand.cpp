@@ -30,10 +30,10 @@ void MoveCommand::Execute()
 void MoveCommand::Revert()
 {
 	AGameSlot* SlotA = AGameGrid::FindSlot(Source);
-    AGameSlot* SlotB = AGameGrid::FindSlot(Destination);
+	AGameSlot* SlotB = AGameGrid::FindSlot(Destination);
 
-    AUnitBase* UnitA = SlotA->Unit;
-    check(UnitA);
-    UnitA->AssignToSlot(SlotB);
-    SlotA->SetState(GS_Default);
+	AUnitBase* UnitA = SlotB->Unit;
+	check(UnitA);
+	UnitA->AssignToSlot(SlotA);
+	SlotB->SetState(GS_Default);
 }

@@ -64,8 +64,6 @@ public:
 	UFUNCTION(BlueprintCallable)
 	bool UndoLastMove();
 
-	UFUNCTION(BlueprintCallable)
-	void GoBack();
 
 private:
 	AUnitBase* ThePlayer;
